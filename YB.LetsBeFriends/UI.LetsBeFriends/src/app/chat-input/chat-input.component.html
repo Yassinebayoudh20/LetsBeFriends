@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+    <div class="chatbox__row">
+        <div class="enter">
+            <div class="enter__submit">
+                <button class="button button_id_submit" type="submit">
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="enter__textarea">
+                <textarea name="enterMessage" id="enterMessage" cols="30" rows="2" placeholder="Say message..." formControlName="message"></textarea>
+            </div>
+            <div class="enter__icons">
+                <button class="enter__icon" (click)="submit()" [disabled]="!form.valid">
+                    <i class="fa fa-paperclip" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

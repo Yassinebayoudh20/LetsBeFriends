@@ -1,0 +1,62 @@
+/* enter block */
+
+.enter {
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 14px;
+  }
+  
+  .enter:before {
+    background-color: #edeef1;
+    height: 2px;
+    width: 100%;
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+  }
+  
+  .enter__submit {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: 2px solid #e2e3e7;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .enter__textarea {
+    padding-right: 50px;
+  }
+  
+  .enter__textarea textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+  }
+  
+  .enter__icons {
+    padding-right: 50px;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+  }
+  
+  .enter__icons .fa-paperclip {
+    font-size: 16px;
+    color: grey;
+  }
+  
+  .enter__icons .fa-smile-o {
+    font-size: 16px;
+    color: grey;
+  }
+  
+  .enter__icon {
+    margin-right: 12px;
+  }

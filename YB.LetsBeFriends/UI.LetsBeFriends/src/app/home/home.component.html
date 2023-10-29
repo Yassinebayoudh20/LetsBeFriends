@@ -1,0 +1,34 @@
+<ng-container *ngIf="!openChat">
+    <div class="text-center">
+        <h2>{{ 'Lets Get you Connected With Other People' | uppercase }}</h2>
+    </div>
+
+    <div class="flex justify-content-center mt-5">
+        <div class="w-30rem flex justify-content-center">
+            <form [formGroup]="userForm" (ngSubmit)="submit()">
+                <h3>Choose Your Username</h3>
+                <div class="p-float-label">
+                    <input pInputText id="username" formControlName="username" [class.ng-invalid.ng-dirty]="isSubmitted && userForm.get('username')?.errors" />
+                    <label htmlFor="username">Username</label>
+                    <div class="text-red-400" *ngIf="isSubmitted && userForm.get('username')?.hasError('required')">Username is Required!</div>
+                    <div class="text-red-400" *ngIf="isSubmitted && (userForm.get('username')?.hasError('maxlength') || userForm.get('username')?.hasError('minlength'))">
+                        Username should must be at least 3 , and maximum 15 characters
+                    </div>
+                </div>
+
+                <div *ngIf="apiErrorMessages.length > 0">
+                    <ul class="text-red-400">
+                        <li *ngFor="let error of apiErrorMessages">{{ error }}</li>
+                    </ul>
+                </div>
+                <div class="mt-2 text-center">
+                    <p-button label="Submit" type="submit"></p-button>
+                </div>
+            </form>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="openChat">
+    <app-chat (closeChatEmitter)="closeChat()"></app-chat>
+</ng-container>

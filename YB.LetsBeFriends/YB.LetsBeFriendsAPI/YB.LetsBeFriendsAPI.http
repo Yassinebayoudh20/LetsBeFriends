@@ -1,0 +1,6 @@
+@YB.LetsBeFriendsAPI_HostAddress = http://localhost:5051
+
+GET {{YB.LetsBeFriendsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

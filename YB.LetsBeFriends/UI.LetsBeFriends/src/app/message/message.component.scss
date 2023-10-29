@@ -1,0 +1,34 @@
+/* message block */
+
+.message {}
+
+.message__head {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 80px 10px 82px;
+}
+
+.message__note {
+  opacity: 0.5;
+  color: #5b6171;
+  font-size: 12px;
+}
+
+.message__date {}
+
+.message__base {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+}
+
+.message__avatar {}
+
+
+
+.avatar__wrap {
+	border-radius: 50%;
+	text-decoration: none;
+	display: inherit;
+	color: #fff;
+  }

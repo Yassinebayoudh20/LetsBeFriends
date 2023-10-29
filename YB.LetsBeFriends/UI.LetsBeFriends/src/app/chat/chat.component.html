@@ -1,0 +1,52 @@
+<button pButton pRipple label="Disconnect" class="p-button-danger" (onClick)="backToHome()"></button>
+<div class="modal">
+    <div class="modal__dialog">
+        <div class="modal__close">
+            <a href="#" class="modal__icon">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </a>
+            <span class="modal__note"></span>
+        </div>
+        <div class="modal__content chat">
+            <div class="modal__sidebar">
+                <div class="chat__search search">
+                    <div class="search">
+                        <div class="search__icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                        <input type="search" class="search__input" placeholder="Search for User" />
+                        <div class="search__icon search__icon_right">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat__users">
+                    <ul class="users" *ngIf="users">
+						<app-online-users *ngFor="let user of chatService.onlineUsers" [user]="user"></app-online-users>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal__main">
+                <div class="chatbox">
+                    <div class="chatbox__row">
+                        <div class="head">
+                            <div class="head__avatar avatar avatar_larger">
+                                <a href="#" class="avatar__wrap"> M </a>
+                            </div>
+                            <div class="head__title">YOU</div>
+                            <div class="head__note">
+                                <span>{{chatService.onlineUsers.length}} Members</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatbox__row chatbox__row_fullheight">
+                        <div class="chatbox__content">
+							<app-message *ngFor="let message of chatService.chatData" [message]="message"></app-message>
+                        </div>
+                    </div>
+					<app-chat-input (messageEmitter)="receivedMessage($event)"></app-chat-input>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

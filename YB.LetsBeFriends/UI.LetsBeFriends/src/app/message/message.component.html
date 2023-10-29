@@ -1,0 +1,16 @@
+<div class="message">
+    <div class="message__head">
+        <span class="message__note">{{message.from}}</span>
+        <span class="message__note">sent at, {{message.when | date :'hh:mm'}}</span>
+    </div>
+    <div class="message__base">
+        <div class="message__avatar avatar">
+            <a href="#" class="avatar__wrap">
+                <img class="avatar__img" src="http://placehold.it/35x35" width="35" height="35" alt="avatar image" />
+            </a>
+        </div>
+        <div class="message__textbox">
+            <span class="message__text">{{message.message}}</span>
+        </div>
+    </div>
+</div>
