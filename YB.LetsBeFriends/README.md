@@ -1,7 +1,6 @@
 # Let's Be Friends - A .NET 8 and Angular 16 Chat Application
 
-![Let's Be Friends Logo](your-logo.png)
-
+Made By Yassine Bayoudh
 ## Table of Contents
 
 - [Project Overview](#project-overview)
