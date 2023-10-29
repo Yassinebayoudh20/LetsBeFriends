@@ -15,7 +15,7 @@
 
 ## Project Overview
 
-**Let's Be Friends** is a modern, real-time chat application developed using .NET 8 and Angular 16. It's designed to help people connect and foster friendships through instant messaging and group chat features.
+**Let's Be Friends** is a modern, real-time chat application developed using .NET 8 and Angular 16. It's designed to help people connect and foster friendships through instant messaging.
 
 ## Features
 
